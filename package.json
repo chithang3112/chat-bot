@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/chithang3112/chat-bot#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "*",
+    "request": "^2.88.0",
     "socket.io": "^2.1.1"
   }
 }
