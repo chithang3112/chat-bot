@@ -16,7 +16,6 @@ let PORT = process.env.PORT || 80;
 
 app.get('/webhook',function(req, res){
     // res.send('aaa');
-    res.writeHead(200, {'Content-Type': 'text/plain'});
     res.sendStatus(200);
 });
 
