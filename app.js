@@ -2,7 +2,7 @@ let express = require('express');
 
 let http = require('http');
 
-var app = express((req, res) {
+var app = express(function (req, res) {
   res.writeHead(200);
   res.end("hello world\n");
 });
