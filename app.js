@@ -12,7 +12,7 @@ var io = require('socket.io')(httpServer);
 
 let PORT = process.env.PORT || 80;
 
-app.post('/webhook',function(req, res){
+app.get('/webhook',function(req, res){
      res.status(200).end();
     console.log(req);
 });
