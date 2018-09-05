@@ -14,7 +14,7 @@ let PORT = process.env.PORT || 80;
 
 app.post('/webhook',function(req, res){
      res.status(200).end();
-    console.log(req);
+    console.log(req.REPLY_MESSAGE);
 });
 
 httpServer.listen(PORT, () => console.log('Running!!! Listenning on ' + PORT));
