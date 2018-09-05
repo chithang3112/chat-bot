@@ -2,7 +2,10 @@ let express = require('express');
 
 let http = require('http');
 
-var app = express();
+var app = express((req, res) {
+  res.writeHead(200);
+  res.end("hello world\n");
+});
 
 var httpServer = http.createServer(app);
 
