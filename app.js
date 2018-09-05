@@ -16,6 +16,7 @@ const LINE_CHANNEL_ACCESS_TOKEN = 'lTKkZ0/fYh1QKcRf3OVPVCI303Dbff8ijAETN3Qw105r1
 
 app.post('/webhook',function(req, res){
      res.status(200).end();
+     console.log(req.body.events);
 });
 
 httpServer.listen(PORT, () => console.log('Running!!! Listenning on ' + PORT));
