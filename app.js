@@ -10,6 +10,8 @@ var httpServer = http.createServer(app);
 
 var io = require('socket.io')(httpServer);
 
+const LINE_CHANNEL_ACCESS_TOKEN ='f9MGc9opvgyXb+GGZIUfezr/7YcYD9NhLVBIMAA/Qs/qBWw5Fs/27YNQxqikWXW2pK9qTl5fNjrzV7Hvra/opiFFpo9koce/5Y6GvVMZaCnm9FIFqzE3IXS9ghfsSGIkzfEV9SzuVVt4F72Lxi02kAdB04t89/1O/w1cDnyilFU=';
+
 let PORT = process.env.PORT || 80;
 
 app.post('/webhook',function(req, res){
