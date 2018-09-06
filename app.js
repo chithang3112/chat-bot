@@ -14,7 +14,25 @@ let PORT = process.env.PORT || 80;
 
 app.post('/webhook',function(req, res){
      res.status(200).end();
-    console.log(req.events);
+    var headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + LINE_CHANNEL_ACCESS_TOKEN
+    }
+    var body = {
+        replyToken: 'test',
+        messages: [{
+            type: 'text',
+            text: 'こんにちは'
+        }]
+    }
+    var url = 'https://api.line.me/v2/bot/message/reply';
+    request({
+        url: url,
+        method: 'POST',
+        headers: headers,
+        body: body,
+        json: true
+    });
 });
 
 httpServer.listen(PORT, () => console.log('Running!!! Listenning on ' + PORT));
