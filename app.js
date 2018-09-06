@@ -15,7 +15,6 @@ const LINE_CHANNEL_ACCESS_TOKEN ='f9MGc9opvgyXb+GGZIUfezr/7YcYD9NhLVBIMAA/Qs/qBW
 let PORT = process.env.PORT || 80;
 
 app.post('/webhook',function(req, res){
-     res.status(200).end();
     var headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + LINE_CHANNEL_ACCESS_TOKEN
@@ -35,6 +34,7 @@ app.post('/webhook',function(req, res){
         body: body,
         json: true
     });
+    res.status(200).end();
 });
 
 httpServer.listen(PORT, () => console.log('Running!!! Listenning on ' + PORT));
