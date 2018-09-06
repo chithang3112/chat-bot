@@ -21,7 +21,7 @@ app.post('/webhook',function(req, res){
         'Authorization': 'Bearer ' + LINE_CHANNEL_ACCESS_TOKEN
     }
     var body = {
-        replyToken: 'test',
+        replyToken: 'nHuyWiB7yP5Zw52FIkcQobQuGDXCTA',
         messages: [{
             type: 'text',
             text: 'こんにちは'
